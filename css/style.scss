@@ -295,6 +295,7 @@ h2 span {
     grid-template-areas: 
     "left mid right"
     "left1 mid right1";
+    justify-content: center;
     div:nth-child(1) {
         grid-area: left;
     }
