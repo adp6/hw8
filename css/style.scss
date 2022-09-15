@@ -152,12 +152,15 @@ h2 span {
     }
     div:nth-child(7) {
         grid-area: left2;
+        align-self: end;
     }
     div:nth-child(8) {
         grid-area: middle;
+        align-self: end;
     }
     div:nth-child(9) {
         grid-area: right2;
+        align-self: end;
     }
 }
 .more {
@@ -185,6 +188,7 @@ h2 span {
         margin-top: 2.778em;
         display: grid;
         grid-template-columns: auto auto auto auto;
+        gap:10%;
         .bg,
         .bg1,
         .bg2,
@@ -228,66 +232,79 @@ h2 span {
         display: grid;
         grid-template-columns: 50% 50%;
         justify-self: center;
+        .more {
+            justify-content: center;
+        }
+    }
+    div:nth-child(1) {
+        justify-self: center;
     }
     div:nth-child(2) {
-        justify-self: center;
+        justify-self: start;
         padding-bottom: 18.75em;
         .line {
             padding-bottom: 0;
         }
     }
+
 }
 .portfolio2 {
+    gap: 0.4%;
     display: grid;
-    grid-template-columns: repeat(6, auto);
-    grid-template-rows: 18.222em;
-    grid-template-areas: 
-    "left left mid right right right"
-    "left1 left2 mid right1 right2 right3"
-    "left3 left3 mid right1 right4 right3";
-    gap: 2%;
-    div {
-
-    }
-    div:nth-child(1) {
-        grid-area: left;
-    }
-    div:nth-child(2) {
-        grid-area: mid;
-        align-self: center;
-    }
-    div:nth-child(3) {
-        grid-area: right;
-    }
-    div:nth-child(4) {
-        grid-area: left1;
-    }
-    div:nth-child(5) {
-        grid-area: left2;
-    }
-    div:nth-child(6) {
-        grid-area: right1;
-        align-self: center;
-        margin-top: 3.611em;
-    }
-    div:nth-child(7) {
+    grid-template-columns: auto auto auto;
+    .portfolio2_1 {
         display: grid;
-        grid-area: right2;
-        align-self:center;
-        margin-top: 5.556em;
-    }
-    div:nth-child(8) {
-        grid-area: right3;
-        align-self:center;
-        margin-top: 3.611em;
-    }
-    div:nth-child(9) {
-        grid-area: left3;
-    }
-    div:nth-child(10) {
-        grid-area: right4;
+        grid-template-columns: 45% auto;
+        grid-template-areas: 
+        "left  left"
+        "left left"
+        "left2 right2"
+        "left3 left3";
+        div:nth-child(1) {
+            grid-area: left;
+        }
+        div:nth-child(2) {
+            grid-area: left2;
+        }
+        div:nth-child(3) {
+            grid-area: right2;
+        }
+        div:nth-child(4) {
+            grid-area: left3;
+            align-self: end;
+        }
     }
 }
+    .portfolio2_2 {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-areas: 
+        "img img img"
+        "img img img"
+        "img img img"
+        "left mid right"
+        "left mid1 right";
+        div:nth-child(1) {
+            grid-area: img;
+        }
+        div:nth-child(2) {
+            grid-area: left;
+            align-self: end;
+        }
+        div:nth-child(3) {
+            grid-area: mid;
+            align-self: center;
+        }
+        div:nth-child(4) {
+            grid-area: right;
+            align-self: end;
+            
+        }
+        div:nth-child(5) {
+            grid-area: mid1;
+            align-self: end;
+        }
+    }
 .awards {
     display: grid;
     margin-bottom: 11.111em;
